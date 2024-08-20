@@ -1,0 +1,52 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+nav .links {
+  display: flex;
+  gap: 50px;
+}
+
+nav .links .logo {
+  font-size: x-large;
+  color: white;
+}
+
+nav .links .links-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #777;
+  font-size: large;
+}
+
+nav .login-form {
+  display: flex;
+  gap: 10px;
+}
+
+.user-info {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info .edit-profile {
+  cursor: pointer;
+}
+
+.user-info p {
+  color: #af0a92;
+}
+
+.user-info button {
+  border-color: rgb(218, 54, 54);
+}

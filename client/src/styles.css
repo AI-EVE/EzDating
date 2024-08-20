@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  padding: 20px 60px;
+}
+
+input:not([type="submit"]):not([type="file"]),
+button {
+  border: 5px solid white;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 15px;
+  background-color: black;
+}
+
+input:not([type="submit"]):not([type="file"])::placeholder {
+  color: white;
+}
+
+button {
+  color: white;
+  border-color: rgb(93, 218, 93);
+  cursor: pointer;
+  background-color: black;
+}

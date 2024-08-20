@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 95px);
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.first-message {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.register-btn {
+  border-color: rgb(89, 89, 219);
+}
+
+.lm-btn {
+  border-color: #7b913f;
+}
+
+

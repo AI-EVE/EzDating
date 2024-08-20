@@ -1,0 +1,39 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-color: black;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.register-form button {
+  width: fit-content;
+}
+
+.register-btn {
+  border-color: #5dda5d;
+}
+
+.cancel-btn {
+  border-color: rgb(218, 54, 54);
+}
+
+.register-container p {
+  font-weight: 900;
+  font-size: x-large;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}

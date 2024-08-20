@@ -1,0 +1,16 @@
+<div class="container">
+  @if(!registerMode && !accountService.currentUser()) {
+  <div class="welcome-message">
+    <p class="first-message">Find your match</p>
+    <p class="second-message">
+      Come on in view your matches... all you need to do is sign up!
+    </p>
+    <div class="buttons">
+      <button (click)="toggleRegister()" class="register-btn">Register</button>
+      <button class="lm-btn">Learn more</button>
+    </div>
+  </div>
+  } @if (registerMode && !accountService.currentUser()) {
+  <app-register (cancelRegister)="toggleRegister()"></app-register>
+  }
+</div>

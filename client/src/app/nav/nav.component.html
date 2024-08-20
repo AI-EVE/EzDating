@@ -1,0 +1,39 @@
+<nav>
+  <div class="links">
+    <div class="logo">
+      <span>EzDating</span>
+    </div>
+
+    @if(accountService.currentUser()) {
+    <ul class="links-list">
+      <li><a>Mathes</a></li>
+      <li><a>Lists</a></li>
+      <li><a>Messages</a></li>
+    </ul>
+    }
+  </div>
+
+  @if(!accountService.currentUser()) {
+  <form #loginForm="ngForm" (ngSubmit)="login()" class="login-form">
+    <input
+      name="username"
+      [(ngModel)]="model.username"
+      type="text"
+      placeholder="Username"
+    />
+    <input
+      name="password"
+      [(ngModel)]="model.password"
+      type="password"
+      placeholder="Password"
+    />
+    <button type="submit">Login</button>
+  </form>
+  } @if(accountService.currentUser()) {
+  <div class="user-info">
+    <p>{{ accountService.currentUser()?.username }}</p>
+    <p class="edit-profile">Edit profile</p>
+    <button type="submit" (click)="logout()">Logout</button>
+  </div>
+  }
+</nav>
