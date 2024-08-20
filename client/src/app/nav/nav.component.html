@@ -1,16 +1,18 @@
 <nav>
   <div class="links">
     <div class="logo">
-      <span>EzDating</span>
+      <a routerLink="/" routerLinkActive="active">EzDating</a>
     </div>
 
-    @if(accountService.currentUser()) {
     <ul class="links-list">
-      <li><a>Mathes</a></li>
-      <li><a>Lists</a></li>
-      <li><a>Messages</a></li>
+      @if(accountService.currentUser()) {
+      <li>
+        <a routerLink="/members" routerLinkActive="active">Mathes</a>
+      </li>
+      <li><a routerLink="/lists" routerLinkActive="active">Lists</a></li>
+      <li><a routerLink="/messages" routerLinkActive="active">Messages</a></li>
+      }
     </ul>
-    }
   </div>
 
   @if(!accountService.currentUser()) {

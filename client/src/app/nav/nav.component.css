@@ -50,3 +50,7 @@ nav .login-form {
 .user-info button {
   border-color: rgb(218, 54, 54);
 }
+
+a.active {
+  color: white;
+}
