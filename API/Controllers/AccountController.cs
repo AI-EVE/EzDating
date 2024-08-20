@@ -39,17 +39,17 @@ namespace API.Controllers
         {
             var user = await context.Users.FirstOrDefaultAsync(user => user.UserName == loginInfo.Username);
 
-            if (user == null) return Unauthorized("Icorrect Username or password");
+            if (user == null) return Unauthorized("Incorrect Username or password");
 
             using var hmac = new HMACSHA512(user.PasswordSalt);
 
             var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginInfo.Password));
 
-            if (computedHash.Length != user.PasswordHash.Length) return Unauthorized("Icorrect Username or password");
+            if (computedHash.Length != user.PasswordHash.Length) return Unauthorized("Incorrect Username or password");
 
             for (int i = 0; i < computedHash.Length; i++)
             {
-                if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Icorrect Username or password");
+                if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Incorrect Username or password");
             }
 
             return new UserDto {

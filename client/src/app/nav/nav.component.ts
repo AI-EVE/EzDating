@@ -22,11 +22,14 @@ export class NavComponent {
       next: (response) => {
         console.log(response);
         this.toastrService.success('Logged in successfully');
+        this.model = {};
         this.router.navigateByUrl('/members');
       },
       error: (err) => {
         console.log(err);
-        this.toastrService.error(err.error);
+        for (let i = 0; i < err.length; i++) {
+          this.toastrService.error(err[i]);
+        }
       },
       complete: () => console.log('response completed'),
     });

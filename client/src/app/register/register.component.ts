@@ -25,7 +25,9 @@ export class RegisterComponent {
       },
       error: (err) => {
         console.log(err);
-        this.toastrService.error(err.error);
+        for (let i = 0; i < err.length; i++) {
+          this.toastrService.error(err[i]);
+        }
       },
       complete: () => console.log('response completed'),
     });
