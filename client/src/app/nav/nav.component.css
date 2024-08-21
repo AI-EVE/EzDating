@@ -7,6 +7,11 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1000;
+}
+
+ul, p {
+  margin: 0;
 }
 
 nav .links {

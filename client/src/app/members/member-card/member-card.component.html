@@ -1,0 +1,12 @@
+<div class="card">
+  <img src="{{ member().photoUrl }}" alt="{{ member().knownAs }}" />
+  <div class="card-body">
+    <h4>{{ member().username }}</h4>
+    <h5>{{ member().knownAs }}</h5>
+  </div>
+  <div class="buttons">
+    <button routerLink="/members/{{member().username}}" class="details-btn"><i class="fa fa-user"></i></button>
+    <button class="like-btn"><i class="fa fa-heart"></i></button>
+    <button class="message-btn"><i class="fa fa-envelope"></i></button>
+  </div>
+</div>

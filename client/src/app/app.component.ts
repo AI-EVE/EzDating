@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
-import { User } from './_services/_models/user';
+import { User } from './_models/user';
 import { AccountService } from './_services/account.service';
 import { HomeComponent } from './home/home.component';
 
@@ -28,6 +28,4 @@ export class AppComponent implements OnInit {
     if (currentUser != null)
       this.accountService.currentUser.set(JSON.parse(currentUser));
   }
-
- 
 }

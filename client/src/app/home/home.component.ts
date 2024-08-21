@@ -10,31 +10,14 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   accountService: AccountService = inject(AccountService);
   http: HttpClient = inject(HttpClient);
   registerMode: boolean = false;
   users: any;
 
-  ngOnInit(): void {
-    this.getUsers();
-  }
 
   toggleRegister() {
     this.registerMode = !this.registerMode;
-  }
-
-  getUsers() {
-    this.http.get('https://localhost:5001/api/users').subscribe({
-      next: (data) => {
-        this.users = data;
-      },
-      error: (err) => {
-        console.error('There was an error!', err);
-      },
-      complete: () => {
-        console.log('Completed');
-      },
-    });
   }
 }

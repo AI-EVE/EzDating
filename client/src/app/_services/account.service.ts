@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
-import { User } from './_models/user';
+import { User } from '../_models/user';
 import { map } from 'rxjs';
-import { RegisterUser } from './_models/registerUser';
+import { RegisterUser } from '../_models/registerUser';
 
 @Injectable({
   providedIn: 'root',
